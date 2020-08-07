@@ -1,5 +1,4 @@
 
-module.exports = function () {
-    // pwd code
-    const pwd = __dirname;
-  }</
+module.exports.pwd = __dirname;
+
+      

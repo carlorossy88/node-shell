@@ -1,3 +1,6 @@
+
+module.exports = function () {
+
 process.stdout.write('prompt >');
 
 process.stdin.on('data', (data) => {
@@ -5,3 +8,4 @@ process.stdin.on('data', (data) => {
     process.stdout.write('You typed: ' + cmd);
     process.stdout.write('\nprompt > ');
 });
+}//end export function
