@@ -1,19 +1,12 @@
+const pwd = require('./pwd');
 
-
-
-process.stdout.write('prompt >');
+process.stdin.write('promp>');//function executes
 
 process.stdin.on('data', (data) => {
-let output;
-if(data === "pwd"){
- output = pwd;
- const pwd = require('./pwd');
-}
-else if (data === "cmd"){
+    
+    if(data.toString().trim() === 'pwd') {
+        pwd();
+    }
+    process.stdout.write('\nprompt > ');
+}) 
 
-const cmd = require('./cmd');
-output = cmd;
-}
-  process.stdout.write('You current directory is ' + output);
-  process.stdout.write('\nprompt > ');
-});
